@@ -1,1 +1,73 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500&family=Grape+Nuts&family=Indie+Flower&display=swap');
+
+body{
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5rem;
+    background-image: url(assets/background.png);
+  }
+
+h1{
+  font-family: 'Indie Flower', cursive;
+  font-size: 5rem;
+  text-align: center;
+  color: hsl(163, 47%, 3%);
+}
+
+.logo{
+  width: 100%;
+  height: 100%;;
+  padding: 2%;
+}
+
+.join{
+  width: 50%;
+  height: 100%;
+  padding: 2%;
+  margin-left: 30%;
+  margin-top: -10%;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(160,3%, 17%);
+  font-family: 'Indie Flower', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid hsl(160, 3%, 17%);
+  cursor: pointer;
+}
+
+#donate {
+  width: 15%;
+  height: 100%;
+  padding: 2%;
+  margin-top: 2%;
+  margin-right: 15%;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(160,3%, 17%);
+  font-family: 'Indie Flower', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.donation { color:hsl(0, 0%, 100%);
+    background: hsl(328, 98%, 59%);
+    padding: 5px;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    transition: .3s color;
+}
+
+.about{
+  width: 65%;
+  height: 100%;
+  padding: 2%;
+  margin-left: 30%;
+  margin-top: -10%;
+  color: hsl(163, 47%, 3%);
+  font-family: 'Indie Flower', cursive;
+  font-size: 3.5rem;
+  text-align: center;
+}
