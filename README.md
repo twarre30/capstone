@@ -1,3 +1,7 @@
+# Deployed Site
+
+[Girl Scout Troop 1770](https://girl-scout-troop.netlify.app/)
+
 # Capstone
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
