@@ -37,6 +37,15 @@ a {
     text-decoration: none;
 }
 
+a:hover{
+  background-color: blue;
+  color: white;
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: 0.3s;
+}
+
 .about{
   width: 65%;
   height: 100%;
