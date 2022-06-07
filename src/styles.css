@@ -6,6 +6,7 @@ body{
     color: 	hsl(123, 100%, 18%);
     background-color:	hsl(105, 100%, 87%);
     font-size: 1.5rem;
+    max-height: 10%;
 }
 
 h1{
