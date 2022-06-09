@@ -12,7 +12,6 @@ nav{
     display: inline-block;
     cursor: pointer;
     color: hsl(123, 100%, 18%);
-    font-family: Arial, sans-serif;
     font-size: 25px;
     font-weight: bold;
     padding: 6px 24px;
@@ -28,7 +27,6 @@ nav{
     display: inline-block;
     cursor: pointer;
     color: 	hsl(0, 0%, 100%);
-    font-family: Arial, sans-serif;
     font-size: 25px;
     font-weight: bold;
     padding: 6px 24px;
