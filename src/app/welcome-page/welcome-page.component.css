@@ -31,7 +31,6 @@ img{
   height: 80px;
   width: 200px;
   color: hsl(328, 98%, 59%);
-  text-decoration: none;
   }
 
 .about{
@@ -40,3 +39,19 @@ img{
   text-align: center;
 }
 
+@media screen and (max-width: 800px) {
+  img{
+    width: 80%;
+    margin: 3%;
+  }
+  .join{
+    width: 80%;
+    font-size: 2.5rem;
+  }
+  #donate{
+    font-size: 3rem;
+  }
+  .about{
+    font-size: 2.5rem;
+  }
+}
