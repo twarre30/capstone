@@ -2,6 +2,8 @@
 
 [Girl Scout Troop 1770](https://girl-scout-troop.netlify.app/)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dc21dacd-6faf-4956-be3e-0a86ce79e827/deploy-status)](https://app.netlify.com/sites/girl-scout-troop/deploys)
+
 # Capstone
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
