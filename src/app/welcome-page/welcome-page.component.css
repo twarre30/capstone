@@ -7,64 +7,35 @@ main{
 
 img{
   order: 1;
-  width: 50%;
+  width: 145%;
+  margin: -70%;
 }
 
 .join{
-  order: 2;
+  order: 4;
   width: 60%;
   font-size: 3.5rem;
   text-align: center;
-  border-radius: 10px;
-  border: 2px solid hsl(123, 100%, 18%);
   cursor: pointer;
 }
 
 #donate {
-  order: 1;
+  order: 2;
   padding: 2%;
   font-size: 4.5rem;
   text-align: center;
   cursor: pointer;
 }
 
-.button1{
+.button{
   height: 80px;
   width: 200px;
-  background:-webkit-linear-gradient(0deg,transparent 50%, hsl(328, 98%, 59%) 50%);
-  background-size: 400px 80px;
-  border: 4px solid hsl(328, 98%, 59%);
-  transition: 0.8s;
+  color: hsl(328, 98%, 59%);
+  text-decoration: none;
   }
 
-.button2{
-  height: 80px;
-  width: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background:-webkit-linear-gradient(0deg,transparent 50%, hsl(328, 98%, 59%) 50%);
-  background-size: 400px 80px;
-  border: 4px solid hsl(328, 98%, 59%);
-  transition: 0.8s;
-  position: relative;
-  left: 70px;
-}
-
-a{
-  color:hsl(123, 100%, 18%);
-  border-radius: 6px;
-  text-decoration: none;
-  text-transform: capitalize;
-}
-
-a:hover{
-  background-position: 200px 0;
-}
-
 .about{
-  order: 4;
-  padding: 5%;
+  order: 3;
   font-size: 3.5rem;
   text-align: center;
 }
