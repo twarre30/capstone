@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { DirectoryComponent } from './directory/directory.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomePageComponent,
     PageNotFoundComponent,
-    NavigationComponent
+    NavigationComponent,
+    DirectoryComponent
   ],
   imports: [
     BrowserModule,

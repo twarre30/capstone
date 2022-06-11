@@ -5,53 +5,51 @@ main{
   justify-content: center;
 }
 
-img{
-  order: 1;
-  width: 145%;
-  margin: -70%;
-}
-
 .join{
   order: 4;
-  width: 60%;
-  font-size: 3.5rem;
+  width: 50%;
+  font-size: 24px;
   text-align: center;
   cursor: pointer;
 }
 
 #donate {
-  order: 2;
-  padding: 2%;
-  font-size: 4.5rem;
+  order: 4;
+  width: 50%;
+  font-size: 24px;
   text-align: center;
   cursor: pointer;
+
 }
 
 .button{
-  height: 80px;
-  width: 200px;
-  color: hsl(328, 98%, 59%);
+  color: hsl(123, 100%, 18%);
+  text-decoration-color:hsl(328, 98%, 75%);;
   }
+
+.girls{
+  width: 50%;
+  border-radius: 25px;
+}
 
 .about{
   order: 3;
-  font-size: 3.5rem;
+  font-size: 24px;
   text-align: center;
 }
 
 @media screen and (max-width: 800px) {
   img{
-    width: 80%;
-    margin: 3%;
+    width: 100%;
   }
   .join{
     width: 80%;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
   #donate{
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
   .about{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 }

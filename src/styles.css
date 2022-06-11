@@ -1,20 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500&family=Grape+Nuts&family=Indie+Flower&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
 body{
     color: 	hsl(123, 100%, 18%);
+    font-family: 'Open Sans', sans-serif;
+    background-color: hsl(53, 81%, 96%);
 }
-
+header{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
 h1{
   font-family: 'Indie Flower', cursive;
-  font-size: 6rem;
-  text-align: center;
-  margin-top: 0;
+  font-size: 70px;
+}
+img{
+  width: 10%;
+  margin: 25px;
+  border-radius: 80px;
+}
+
+
+.button3{
+  color: hsl(328, 98%, 75%);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 800px) {
   h1{
-    font-size: 4rem;
+    font-size: 40px;
   }
-
+  img{
+    width: 50%;
+    margin: 3%;
+  }
 }
+
+
