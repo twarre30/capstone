@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-directory',
@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./directory.component.css']
 })
 export class DirectoryComponent implements OnInit {
+  @Input() parentName!: string;
+  @Input() daughterName!: string;
+  @Input() address?: string;
+  @Input() email?: string;
+  @Input() phoneNumber?: string;
 
   constructor() { }
 
