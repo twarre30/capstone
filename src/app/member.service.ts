@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Member } from './models/Member';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
+import {environment} from '../environments/environment';
+
 
 type MembersResponse = {
   members: Member[];
 }
 
-const membersEndpoint = '${environment.baseApiUrl}/api/members';
+const membersEndpoint = '${environment.baseApiUrl}/api/members'
 
 @Injectable({
   providedIn: 'root'

@@ -3,20 +3,16 @@
   <table>
     <thead>
       <tr>
-        <th>Parent Name</th>
-        <th>Daughter Name</th>
-        <th>Address</th>
-        <th>Email</th>
-        <th>Phone Number</th>
+        <th *ngFor="let column of headers">
+          {{column}}
+        </th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>{{parentName}}</td>
-        <td>{{daughterName}}</td>
-        <td>{{address}}</td>
-        <td>{{email}}</td>
-        <td>{{phoneNumber}}</td>
+      <tr *ngFor="let row of rows">
+        <td *ngFor="let column of headers">
+          {{row}}
+        </td>
       </tr>
       </tbody>
   </table>
