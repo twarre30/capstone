@@ -63,11 +63,16 @@ tbody tr:nth-child(even) {
   background-color: hsl(0, 100%, 100%);
 }
 
-button{
-  background-color:hsl(328, 98%, 75%);
+.member-form{
+    max-width: 300px;
+  }
+
+.button{
+  background-color:hsl(328, 98%, 85%);
   border-radius: 25px;
   border: none;
-  color: hsl(0, 100%, 100%);
+  box-shadow: 0 2px 2px hsl(328, 10%, 85%);
+  color: hsl(328, 98%, 15%);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -119,7 +124,8 @@ button{
   tbody tr:nth-child(even) {
     background-color: hsl(0, 100%, 100%);
   }
-  button{
+
+  .button{
     background-color:hsl(328, 98%, 75%);
     border-radius: 25px;
     border: none;

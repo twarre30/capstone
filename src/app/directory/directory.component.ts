@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MemberService } from '../member.service';
+import { Member } from '../models/Member';
+
 
 
 
@@ -30,9 +33,21 @@ export class DirectoryComponent implements OnInit {
     "phoneNumber": "555-451-2575"
   }]
 
-  constructor() { }
+  members: Member[] = []
+
+  constructor(private memberService: MemberService) { }
 
   ngOnInit(): void {
+    this.memberService.fetchMembers().subscribe(response => {
+      this.members = response.members
+    })
   }
 
+
+
+addMember(newMember: Member) {
+  this.memberService.addMember(newMember).subscribe(reponse => {
+    this.members = [reponse.member, ...this.members]
+  })
+}
 }

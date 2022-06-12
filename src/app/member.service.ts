@@ -7,8 +7,9 @@ import {environment} from '../environments/environment';
 type MembersResponse = {
   members: Member[];
 }
-
-const membersEndpoint = '${environment.baseApiUrl}/api/members'
+type MemberResponse = {
+  member: Member;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -32,7 +33,11 @@ export class MemberService {
 
 
   fetchMembers() {
-    return this.http.get<MembersResponse>(membersEndpoint)
+    return this.http.get<MembersResponse>('${environment.baseApiUrl}/api/members')
+  }
+
+  addMember(member: Member) {
+    return this.http.post<MemberResponse>('${environment.baseApiUrl}/api/members', member)
   }
   }
 
