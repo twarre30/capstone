@@ -29,6 +29,7 @@ export class MemberFormComponent implements OnInit {
   addMember(newMember: Member) {
     this.memberService.addMember(newMember).subscribe(response => {
       this.members = [response.member, ...this.members]
+      console.log(newMember)
     })
   }
 }

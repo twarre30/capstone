@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { environment } from '../../environments/environment';
+import { Component, Input, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-events',
@@ -7,6 +7,8 @@ import { environment } from '../../environments/environment';
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent implements OnInit {
+  @Input() date!: string;
+  @Input() plan!: string;
 
   WeatherData: any;
   data: any;
@@ -22,7 +24,7 @@ export class EventsComponent implements OnInit {
   }
 
   getWeatherData() {
-    fetch('https://api.openweathermap.org/data/2.5/weather?lat=35.798670&lon=-86.907341&appid=${weatherApiKey}&units=imperial')
+    fetch('https://api.openweathermap.org/data/2.5/weather?lat=35.798670&lon=-86.907341&appid={{weatherApiKey}}&units=imperial')
       .then(response => response.json())
       .then(data => { this.setWeatherData(data); })
 
@@ -40,5 +42,6 @@ export class EventsComponent implements OnInit {
     this.WeatherData.temp_max = (this.WeatherData.main.temp_max).toFixed(0);
     this.WeatherData.temp_feels_like = (this.WeatherData.main.feels_like).toFixed(0);
   }
+
 
 }

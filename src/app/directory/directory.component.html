@@ -3,17 +3,24 @@
   <table>
     <thead>
       <tr>
-          <th *ngFor="let column of headers">
-            {{column}}
-          </th>
+        <th>Parent Name</th>
+        <th>Daughter Name</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Phone Number</th>
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let row of rows">
-          <td *ngFor="let column of headers">
-            {{row}}
-          </td>
+      <tr>
+     <!--   <app-member-listing
+      </app-member-listing>  [parentName]="member.parentName" 
+        [daughterName]="member.daughterName"
+        [address]="member.address" 
+        [email]="member.email" 
+        [phoneNumber]="member.phoneNumber"
+        ></app-member-listing> -->
+      </tr>
     </tbody>
   </table>
-  <app-member-form></app-member-form>
+  <button class="button">Update</button>
 </main>

@@ -10,35 +10,22 @@ type MemberResponse = {
   member: Member;
 }
 
+const membersEndPoint = `${environment.baseApiUrl}/api/members`;
 @Injectable({
   providedIn: 'root'
 })
 export class MemberService {
-  members: Member[] = [{
-    id: '1000',
-    parentName: "Mary",
-    daughterName: "Suzy",
-    address: "123 Main St",
-    email: "mary@gmail.com",
-    phoneNumber: "555-253-4512",
-  }, {
-    id: '2000',
-    parentName: "Jane",
-    daughterName: "Brenda",
-    address: "567 Main St",
-    email: "jane@gmail.com",
-    phoneNumber: "555-451-2575",
-  }]
+  members: Member[] = []
 
   constructor(private http: HttpClient) { }
 
 
   fetchMembers() {
-    return this.http.get<MembersResponse>('${environment.baseApiUrl}/api/members')
+    return this.http.get<MembersResponse>(membersEndPoint)
   }
 
   addMember(member: Member) {
-    return this.http.post<MemberResponse>('${environment.baseApiUrl}/api/members', member)
+    return this.http.post<MemberResponse>(membersEndPoint, member)
   }
   }
 

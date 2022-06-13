@@ -10,6 +10,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { DirectoryComponent } from './directory/directory.component';
 import { MemberFormComponent } from './member-form/member-form.component';
 import { EventsComponent } from './events/events.component';
+import { MemberListingComponent } from './member-listing/member-listing.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EventsComponent } from './events/events.component';
     NavigationComponent,
     DirectoryComponent,
     MemberFormComponent,
-    EventsComponent
+    EventsComponent,
+    MemberListingComponent
   ],
   imports: [
     BrowserModule,
