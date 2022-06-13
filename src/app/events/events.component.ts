@@ -24,7 +24,7 @@ export class EventsComponent implements OnInit {
   }
 
   getWeatherData() {
-    fetch('https://api.openweathermap.org/data/2.5/weather?lat=35.798670&lon=-86.907341&appid={{weatherApiKey}}&units=imperial')
+    fetch('https://api.openweathermap.org/data/2.5/weather?lat=35.798670&lon=-86.907341&appid=${ weatherApiKey }&units=imperial')
       .then(response => response.json())
       .then(data => { this.setWeatherData(data); })
 
