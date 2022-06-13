@@ -2,6 +2,8 @@ main{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
+  padding: 25px;
+  margin: 5%;
 }
 #divWeatherMain{
     display: block;
@@ -52,6 +54,11 @@ main{
 }
 
 
-.events{
+h3{
+  font-family: 'Indie Flower', cursive;
+  font-size: 28px;
+}
 
+.events{
+  font-size: 18px;
 }
