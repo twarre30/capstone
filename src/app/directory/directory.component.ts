@@ -10,6 +10,9 @@ import { Member } from '../models/Member';
   templateUrl: './directory.component.html',
   styleUrls: ['./directory.component.css']
 })
+
+
+
 export class DirectoryComponent implements OnInit {
   @Input() parentName!: string;
   @Input() daughterName!: string;
@@ -17,7 +20,7 @@ export class DirectoryComponent implements OnInit {
   @Input() email?: string;
   @Input() phoneNumber?: string;
 
-  headers = ["Parent Name", "Daughter Name", "Address", "Email", "Phone Number"];
+  headers = ["id","Parent Name", "Daughter Name", "Address", "Email", "Phone Number"];
 
   rows = [{
     "parentName": "Mary",
@@ -33,7 +36,9 @@ export class DirectoryComponent implements OnInit {
     "phoneNumber": "555-451-2575"
   }]
 
-  members: Member[] = []
+
+  members: Member[] = [];
+
 
   constructor(private memberService: MemberService) { }
 
@@ -43,11 +48,4 @@ export class DirectoryComponent implements OnInit {
     })
   }
 
-
-
-addMember(newMember: Member) {
-  this.memberService.addMember(newMember).subscribe(reponse => {
-    this.members = [reponse.member, ...this.members]
-  })
-}
 }

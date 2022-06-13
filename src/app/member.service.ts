@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Member } from './models/Member';
 import { HttpClient } from '@angular/common/http';
-import {environment} from '../environments/environment';
-
+import {environment} from 'src/environments/environment';
 
 type MembersResponse = {
   members: Member[];
@@ -16,12 +15,14 @@ type MemberResponse = {
 })
 export class MemberService {
   members: Member[] = [{
+    id: '1000',
     parentName: "Mary",
     daughterName: "Suzy",
     address: "123 Main St",
     email: "mary@gmail.com",
     phoneNumber: "555-253-4512",
   }, {
+    id: '2000',
     parentName: "Jane",
     daughterName: "Brenda",
     address: "567 Main St",

@@ -1,0 +1,41 @@
+<main>
+  <div id="divWeatherMain">
+    <div *ngIf="WeatherData.isDay" class="weatherWidgetRow">
+      <i class="fas fa-3x fa-sun sun"></i>
+    </div>
+    <div *ngIf="!WeatherData.isDay" class="weatherWidgetRow">
+      <i class="fas fa-3x fa-moon moon"></i>
+    </div>
+    <div class="weatherWidgetRow cloudDiv">
+      <i class="fas fa-cloud fa-3x cloud"></i>
+    </div>
+    <div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">{{WeatherData.temp}}°</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">{{WeatherData.temp_min}}° / {{WeatherData.temp_max}}°</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">Feels Like: {{WeatherData.temp_feels_like}}°</div>
+    <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{WeatherData.name}}</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">Humidity: {{WeatherData.main.humidity}}%</div>
+  </div>
+
+  <h2>Events</h2>
+  <ul>
+    <li>
+      <div class="events">
+        <p class="event-date">June 24, 2022</p>
+        <p class="event-plan">Camping at Sycamore Hills 6pm</p>
+      </div>
+    </li>
+    <li>
+      <div class="events">
+        <p class="event-date">June 30, 2022</p>
+        <p class="event-plan">Troop Meeting at the Rec Center 7pm</p>
+      </div>
+    </li>
+    <li>
+      <div class="events">
+        <p class="event-date">July 2, 2022</p>
+        <p class="event-plan">First Aid Training 8am</p>
+      </div>
+    </li>
+  </ul>
+
+</main>

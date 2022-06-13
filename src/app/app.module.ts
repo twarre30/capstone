@@ -8,6 +8,8 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { DirectoryComponent } from './directory/directory.component';
+import { MemberFormComponent } from './member-form/member-form.component';
+import { EventsComponent } from './events/events.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { DirectoryComponent } from './directory/directory.component';
     WelcomePageComponent,
     PageNotFoundComponent,
     NavigationComponent,
-    DirectoryComponent
+    DirectoryComponent,
+    MemberFormComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
