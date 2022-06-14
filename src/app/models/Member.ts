@@ -1,4 +1,5 @@
 export type Member = {
+  id: number;
   parentName: string;
   daughterName: string;
   address?: string;

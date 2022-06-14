@@ -27,5 +27,12 @@ export class MemberService {
   addMember(member: Member) {
     return this.http.post<MemberResponse>(membersEndPoint, member)
   }
+
+  updateMember(member: Member) {
+    return this.http.put<MemberResponse>(`${membersEndPoint}/${member.id}`, member)
   }
 
+  deleteMember(member: Member) {
+    return this.http.delete<MemberResponse>(`${membersEndPoint}/${member.id}`)
+  }
+}
