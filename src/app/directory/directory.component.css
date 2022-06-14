@@ -14,7 +14,7 @@ table {
 }
 
 thead th:nth-child(1) {
-  width: 10%;
+  width: 20%;
 }
 
 thead th:nth-child(2) {
@@ -33,9 +33,6 @@ thead th:nth-child(5) {
   width: 20%;
 }
 
-thead th:nth-child(6) {
-  width: 10%;
-}
 
 th, td {
   padding: 20px;
@@ -43,6 +40,11 @@ th, td {
 
 th {
   letter-spacing: 2px;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
 }
 
 td {

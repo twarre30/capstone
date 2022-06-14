@@ -11,14 +11,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr> <!--
+      <tr class="grid-container" *ngFor="let member of members"> 
       <app-member-listing
         [parentName]="member.parentName" 
         [daughterName]="member.daughterName"
         [address]="member.address" 
         [email]="member.email" 
         [phoneNumber]="member.phoneNumber"
-        ></app-member-listing> -->
+        ></app-member-listing>
       </tr>
     </tbody>
   </table>
