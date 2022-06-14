@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { apiKeyConfig } from 'src/environments/environment'; 
+import { EventService } from '../event.service';
+import { Event } from '../models/Event';
 
 @Component({
   selector: 'app-events',
@@ -7,15 +9,12 @@ import { apiKeyConfig } from 'src/environments/environment';
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent implements OnInit {
-  @Input() date!: string;
-  @Input() plan!: string;
+
 
   WeatherData: any;
   data: any;
 
   weatherApiKey = apiKeyConfig.weatherApiKey;
-
-  constructor() { }
 
   ngOnInit() {
     this.WeatherData = {
@@ -24,6 +23,10 @@ export class EventsComponent implements OnInit {
     };
     this.getWeatherData();
     console.log(this.WeatherData);
+
+    this.eventService.fetchEvents().subscribe(events => {
+      this.events = events;
+    })
   }
 
   getWeatherData() {
@@ -45,6 +48,12 @@ export class EventsComponent implements OnInit {
     this.WeatherData.temp_max = (this.WeatherData.main.temp_max).toFixed(0);
     this.WeatherData.temp_feels_like = (this.WeatherData.main.feels_like).toFixed(0);
   }
+
+
+  events: Event[] = [];
+
+  constructor(private eventService: EventService) { }
+
 
 
 }

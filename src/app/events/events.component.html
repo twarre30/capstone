@@ -18,23 +18,8 @@
 
   <h3>Upcoming Events</h3>
   <ul>
-    <li>
-      <div class="events">
-        <p class="event-date">June 24, 2022</p>
-        <p class="event-plan">Camping at Sycamore Hills 6pm</p>
-      </div>
-    </li>
-    <li>
-      <div class="events">
-        <p class="event-date">June 30, 2022</p>
-        <p class="event-plan">Troop Meeting at the Rec Center 7pm</p>
-      </div>
-    </li>
-    <li>
-      <div class="events">
-        <p class="event-date">July 2, 2022</p>
-        <p class="event-plan">First Aid Training 8am</p>
-      </div>
+    <li *ngFor="let event of events">
+      <app-event-listing [date]="event.date" [plan]="event.plan"></app-event-listing>
     </li>
   </ul>
 
