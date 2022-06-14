@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-events',
@@ -12,6 +12,9 @@ export class EventsComponent implements OnInit {
 
   WeatherData: any;
   data: any;
+
+  weatherApiKey = environment.weatherApiKey;
+
   constructor() { }
 
   ngOnInit() {
@@ -24,7 +27,7 @@ export class EventsComponent implements OnInit {
   }
 
   getWeatherData() {
-    fetch('https://api.openweathermap.org/data/2.5/weather?lat=35.798670&lon=-86.907341&appid=${ weatherApiKey }&units=imperial')
+    fetch(this.weatherApiKey)
       .then(response => response.json())
       .then(data => { this.setWeatherData(data); })
 
