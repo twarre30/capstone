@@ -13,7 +13,7 @@ export class EventsComponent implements OnInit {
   WeatherData: any;
   data: any;
 
-  weatherApiKey = environment.weatherApiKey;
+  weatherApiKey: any = environment.weatherApiKey;
 
   constructor() { }
 
