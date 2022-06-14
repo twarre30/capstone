@@ -5,13 +5,17 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { DirectoryComponent } from './directory/directory.component';
 import {EventsComponent } from './events/events.component';
 import { MemberFormComponent } from './member-form/member-form.component';
+import { EditMemberComponent } from './edit-member/edit-member.component';
+import { RemoveMemberComponent } from './remove-member/remove-member.component';
 
 const routes: Routes = [
   { path: 'welcome-page', component: WelcomePageComponent },
   {
     path: 'directory', component: DirectoryComponent,
       children: [
-      { path: 'member-form', component: MemberFormComponent }
+        { path: 'member-form', component: MemberFormComponent },
+        { path: 'edit-member', component: EditMemberComponent },
+        { path: 'remove-member', component: RemoveMemberComponent },
   ] },
   {path: 'events', component: EventsComponent},
   { path: '', redirectTo: '/welcome-page', pathMatch: 'full' },
@@ -28,4 +32,4 @@ const formRoutes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const ArrayOfComponents = [DirectoryComponent, MemberFormComponent];
+export const ArrayOfComponents = [DirectoryComponent, MemberFormComponent, EditMemberComponent, RemoveMemberComponent];

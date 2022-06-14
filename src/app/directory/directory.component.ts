@@ -24,7 +24,13 @@ export class DirectoryComponent implements OnInit {
   }
 
   addMemeber() {
-    this.router.navigate(['/member-form']), {relativeTo: this.route}
+    this.router.navigate(['/member-form']), { relativeTo: this.route }
+  }
+  editMember() {
+    this.router.navigate(['/edit-member']), { relativeTo: this.route }
+  }
+  removeMember() {
+    this.router.navigate(['/remove-member']), { relativeTo: this.route }
   }
 
 }

@@ -13,6 +13,8 @@ import { EventsComponent } from './events/events.component';
 import { MemberListingComponent } from './member-listing/member-listing.component';
 import { EventListingComponent } from './event-listing/event-listing.component';
 import { FormLinksComponent } from './form-links/form-links.component';
+import { EditMemberComponent } from './edit-member/edit-member.component';
+import { RemoveMemberComponent } from './remove-member/remove-member.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { FormLinksComponent } from './form-links/form-links.component';
     MemberListingComponent,
     EventListingComponent,
     FormLinksComponent,
-    ArrayOfComponents
+    ArrayOfComponents,
+    EditMemberComponent,
+    RemoveMemberComponent
   ],
   imports: [
     BrowserModule,

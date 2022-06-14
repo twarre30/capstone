@@ -1,8 +1,8 @@
 nav{
   display: flex;
-  margin-left: 200px;
+  justify-content: center;
   align-items: center;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Open Sans', sans-serif;
 
 }
 
@@ -12,7 +12,7 @@ nav{
     display: inline-block;
     cursor: pointer;
     color: hsl(123, 100%, 18%);
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     padding: 6px 24px;
     text-decoration-color: hsl(328, 98%, 75%);
@@ -24,7 +24,7 @@ nav{
     display: inline-block;
     cursor: pointer;
     color: 	hsl(123, 100%, 18%);
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     padding: 6px 24px;
     text-decoration-color: hsl(328, 98%, 75%);
