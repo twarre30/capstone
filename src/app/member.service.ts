@@ -31,7 +31,7 @@ export class MemberService {
   }
 
   updateMember(member: Member) {
-    return this.http.patch<MemberResponse>(`${membersEndPoint}/${member.id}`, member).subscribe(response => {
+    return this.http.put<MemberResponse>(`${membersEndPoint}/${member.id}`, member).subscribe(response => {
       this.members = [response.member]
     })
 
