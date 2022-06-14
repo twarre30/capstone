@@ -11,12 +11,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="grid-container" *ngFor="let member of members"> 
+      <tr class="grid-container" *ngFor="let member of members">
       <app-member-listing
-        [parentName]="member.parentName" 
+        [parentName]="member.parentName"
         [daughterName]="member.daughterName"
-        [address]="member.address" 
-        [email]="member.email" 
+        [address]="member.address"
+        [email]="member.email"
         [phoneNumber]="member.phoneNumber"
         ></app-member-listing>
       </tr>
@@ -24,4 +24,5 @@
   </table>
 </main>
 
-<app-member-form></app-member-form>
+<app-form-links></app-form-links>
+<router-outlet></router-outlet>

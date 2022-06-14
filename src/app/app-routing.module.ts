@@ -4,13 +4,22 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { DirectoryComponent } from './directory/directory.component';
 import {EventsComponent } from './events/events.component';
+import { MemberFormComponent } from './member-form/member-form.component';
 
 const routes: Routes = [
   { path: 'welcome-page', component: WelcomePageComponent },
-  { path: 'directory', component: DirectoryComponent },
+  {
+    path: 'directory', component: DirectoryComponent,
+      children: [
+      { path: 'member-form', component: MemberFormComponent }
+  ] },
   {path: 'events', component: EventsComponent},
   { path: '', redirectTo: '/welcome-page', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
+];
+
+const formRoutes: Routes = [
+  { path: 'member-form', component: MemberFormComponent },
 ];
 
 @NgModule({
@@ -18,3 +27,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+export const ArrayOfComponents = [DirectoryComponent, MemberFormComponent];
