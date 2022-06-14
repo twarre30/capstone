@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./member-listing.component.css']
 })
 export class MemberListingComponent implements OnInit {
+  @Input() id!: number;
   @Input() parentName!: string;
   @Input() daughterName!: string;
   @Input() address?: string;

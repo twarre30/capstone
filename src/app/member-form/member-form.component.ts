@@ -8,6 +8,7 @@ import { Member } from '../models/Member';
   styleUrls: ['./member-form.component.css'],
 
   template: `
+    Id: <input type="text" [(ngModel)] = "id" >
     ParentName: <input type="text" [(ngModel)] = "parentName" >
     DaughterName: <input type="text" [(ngModel)]= "daughterName" >
     Address: <input type="text" [(ngModel)] = "address" >

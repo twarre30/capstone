@@ -8,6 +8,7 @@ import { Member } from '../models/Member';
   styleUrls: ['./remove-member.component.css'],
 
   template: `
+    Id: <input type="text" [(ngModel)] = "id" >
     ParentName: <input type="text" [(ngModel)] = "parentName" >
     DaughterName: <input type="text" [(ngModel)]= "daughterName" >
     Address: <input type="text" [(ngModel)] = "address" >
@@ -15,7 +16,7 @@ import { Member } from '../models/Member';
     PhoneNumber: <input type="text" [(ngModel)]= "phoneNumber" >
 `
 })
-export class EditMemberComponent implements OnInit {
+export class RemoveMemberComponent implements OnInit {
 
 
   members: Member[] = []
