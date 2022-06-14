@@ -19,18 +19,14 @@ import { Member } from '../models/Member';
 export class EditMemberComponent implements OnInit {
 
 
-  members: Member[] = []
-
-  constructor(private memberService: MemberService) { }
+  constructor(private member: MemberService) { }
 
 
   ngOnInit(): void { }
 
 
-
   updateMember(updateMember: Member) {
-    this.memberService.updateMember(updateMember).subscribe(response => {
-      this.members = [response.member]
-    })
+    this.member.updateMember(updateMember)
   }
+
 }

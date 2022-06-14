@@ -7,6 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './member-listing.component.html',
   styleUrls: ['./member-listing.component.css']
 })
+  
+
 export class MemberListingComponent implements OnInit {
   @Input() id!: number;
   @Input() parentName!: string;
@@ -18,6 +20,11 @@ export class MemberListingComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
+  ngAfterViewInit() { 
+    console.log(this.id);
+    console.log(this.parentName);
+  }
 }

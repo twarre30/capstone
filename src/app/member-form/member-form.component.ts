@@ -8,7 +8,6 @@ import { Member } from '../models/Member';
   styleUrls: ['./member-form.component.css'],
 
   template: `
-    Id: <input type="text" [(ngModel)] = "id" >
     ParentName: <input type="text" [(ngModel)] = "parentName" >
     DaughterName: <input type="text" [(ngModel)]= "daughterName" >
     Address: <input type="text" [(ngModel)] = "address" >
@@ -18,20 +17,22 @@ import { Member } from '../models/Member';
 })
 export class MemberFormComponent implements OnInit {
 
-
-  members: Member[] = []
+  members: Member[] = [];
 
   constructor(private memberService: MemberService) { }
 
 
-  ngOnInit(): void {}
-
-
-  addMember(newMember: Member) {
-    this.memberService.addMember(newMember).subscribe(response => {
-      this.members = [response.member, ...this.members]
+  ngOnInit(): void {
+    this.memberService.fetchMembers().subscribe(response => {
+      this.members = response.members
     })
+
   }
+
+
+addMember(newMember: Member) {
+  this.memberService.addMember(newMember)
+}
 }
 
 

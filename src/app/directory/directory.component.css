@@ -52,6 +52,7 @@ th {
 
 td {
   letter-spacing: 1px;
+  display: table-cell;
 }
 
 tbody td {

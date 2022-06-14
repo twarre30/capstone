@@ -9,17 +9,10 @@ import { Member } from '../models/Member';
 
   template: `
     Id: <input type="text" [(ngModel)] = "id" >
-    ParentName: <input type="text" [(ngModel)] = "parentName" >
-    DaughterName: <input type="text" [(ngModel)]= "daughterName" >
-    Address: <input type="text" [(ngModel)] = "address" >
-    Email: <input type="text" [(ngModel)]= "email" >
-    PhoneNumber: <input type="text" [(ngModel)]= "phoneNumber" >
 `
 })
 export class RemoveMemberComponent implements OnInit {
 
-
-  members: Member[] = []
 
   constructor(private memberService: MemberService) { }
 
@@ -29,9 +22,7 @@ export class RemoveMemberComponent implements OnInit {
 
 
   deleteMember(deleteMember: Member) {
-    this.memberService.deleteMember(deleteMember).subscribe(response => {
-      this.members = [response.member]
-    })
+    this.memberService.deleteMember(deleteMember)
   }
 
 }

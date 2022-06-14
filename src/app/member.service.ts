@@ -25,14 +25,21 @@ export class MemberService {
   }
 
   addMember(member: Member) {
-    return this.http.post<MemberResponse>(membersEndPoint, member)
+    return this.http.post<MemberResponse>(membersEndPoint, member).subscribe(response => {
+      this.members = [response.member, ...this.members]
+    })
   }
 
   updateMember(member: Member) {
-    return this.http.put<MemberResponse>(`${membersEndPoint}/${member.id}`, member)
+    return this.http.patch<MemberResponse>(`${membersEndPoint}/${member.id}`, member).subscribe(response => {
+      this.members = [response.member]
+    })
+
   }
 
   deleteMember(member: Member) {
-    return this.http.delete<MemberResponse>(`${membersEndPoint}/${member.id}`)
+    return this.http.delete<MemberResponse>(`${membersEndPoint}/${member.id}`).subscribe(response => {
+      this.members = [response.member]
+    })
   }
 }
