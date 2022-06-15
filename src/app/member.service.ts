@@ -22,7 +22,9 @@ export class MemberService {
 
 
   fetchMembers() {
-    return this.http.get<MembersResponse>(membersEndPoint)
+    return this.http.get<MembersResponse>(membersEndPoint).subscribe(response => {
+      this.members = response.members
+    })
   }
 
   addMember(member: Member) {
@@ -37,14 +39,15 @@ export class MemberService {
 
   updateMember(member: Member) {
     return this.http.put<MemberResponse>(`${membersEndPoint}/${member.id}`, member).subscribe(response => {
-      this.members = [response.member]
+      this.members = [...this.members, response.member]
     })
 
   }
 
   deleteMember(member: Member) {
-    return this.http.delete<MemberResponse>(`${membersEndPoint}/${member.id}`).subscribe(response => {
-      this.members = [response.member]
+    return this.http.delete<MemberResponse>(`${membersEndPoint}/${member.id}`).subscribe(() => {
+      this.members = this.members.filter(m => +m.id !== +member.id)
+    
     })
   }
 }

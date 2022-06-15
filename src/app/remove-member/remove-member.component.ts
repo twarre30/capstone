@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MemberService } from '../member.service';
 import { Member } from '../models/Member';
 
@@ -20,9 +20,11 @@ export class RemoveMemberComponent implements OnInit {
   ngOnInit(): void { }
 
 
-
+@ViewChild('removeMemberForm') removeMemberForm: any;
   deleteMember(deleteMember: Member) {
-    this.memberService.deleteMember(deleteMember)
+    this.memberService.deleteMember(deleteMember);
+    this.removeMemberForm.reset();
   }
+
 
 }

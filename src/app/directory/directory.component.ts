@@ -12,15 +12,18 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class DirectoryComponent implements OnInit {
 
-  members: Member[] = [];
+  
 
 
   constructor(private memberService: MemberService, private route: ActivatedRoute, private router: Router ) { }
 
   ngOnInit(): void {
-    this.memberService.fetchMembers().subscribe(response => {
-      this.members = response.members
-    })
+    this.memberService.fetchMembers()
+    
+  }
+
+  getMembers() {
+    return this.memberService.members;
   }
 
   addMemeber() {

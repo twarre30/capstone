@@ -18,7 +18,7 @@ import { Router } from '@angular/router';
 })
 export class MemberFormComponent implements OnInit {
 
-  members: Member[] = [];
+  
 
   constructor(private memberService: MemberService, private router: Router) { }
 
