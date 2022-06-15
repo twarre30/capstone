@@ -8,6 +8,9 @@
 
 This app is to help Girl Scout leaders organize their troops.
 
+# Front page view
+![Girl Scout Troop 1770](assets/../src/assets/frontpage.png)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
 
 ## Development server
