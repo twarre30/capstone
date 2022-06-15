@@ -4,123 +4,57 @@ h3{
   font-size: 28px;
 }
 
-/* spacing */
-
-table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
-}
-
-thead th:nth-child(1) {
-  width: 10%;
-}
-
-thead th:nth-child(2) {
-  width: 20%;
-}
-
-thead th:nth-child(3) {
-  width: 20%;
-}
-
-thead th:nth-child(4) {
-  width: 20%;
-}
-
-thead th:nth-child(5) {
-  width: 20%;
-}
-
-thead th:nth-child(6) {
-  width: 10%;
-}
-
-th, td {
-  padding: 20px;
-}
-
-th {
-  letter-spacing: 2px;
-}
-
-.grid-container{
+.header{
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-}
-
-td {
+  grid-template-columns: repeat(7, 1fr);
+  padding: 20px;
   letter-spacing: 1px;
-  display: table-cell;
-}
-
-tbody td {
   text-align: center;
+  font-weight: bolder;
+  background-color: hsl(53, 100%, 90%)
 }
 
-thead{
-  background-color: hsl(53, 100%, 96%)
+.id{
+  grid-column: 1 / span 1;
 }
 
-/* zebra striping */
-
-tbody tr:nth-child(odd) {
-  background-color:hsl(53, 81%, 85%);
+.parent{
+  grid-column: 2 / span 1;
 }
 
-tbody tr:nth-child(even) {
-  background-color: hsl(0, 100%, 100%);
+.daughter{
+  grid-column: 3 / span 1;
 }
 
-
-
-
-@media  screen and (max-width: 800px) {
-  table {
-    width: 100%;
-  }
-  thead th:nth-child(1) {
-    width: 10%;
-  }
-  thead th:nth-child(2) {
-    width: 20%;
-  }
-  thead th:nth-child(3) {
-    width: 20%;
-  }
-  thead th:nth-child(4) {
-    width: 20%;
-  }
-  thead th:nth-child(5) {
-    width: 20%;
-  }
-  thead th:nth-child(6) {
-    width: 10%;
-  }
-  th, td {
-    padding: 0px;
-  }
-  th {
-    letter-spacing: 1px;
-  }
-  td {
-    letter-spacing: 1px;
-  }
-  tbody td {
-    text-align: center;
-  }
-  thead{
-    background-color: hsl(53, 100%, 96%)
-  }
-
-  /* zebra striping */
-  tbody tr:nth-child(odd) {
-    background-color:hsl(53, 81%, 85%);
-  }
-  tbody tr:nth-child(even) {
-    background-color: hsl(0, 100%, 100%);
-  }
-
-
+.address{
+  grid-column: 4 / span 1;
 }
 
+.email{
+  grid-column: 5 / span 1;
+}
+
+.phone{
+  grid-column: 6 / span 1;
+}
+
+/* Back to top */
+
+.top {
+    --offset: 50px;
+
+    position: sticky;
+    bottom: 20px;
+    margin-left: 90%;
+    place-self: end;
+    margin-top: calc(100vh + var(--offset));
+
+  /* visual styling */
+    text-decoration: none;
+    padding: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    background: #000;
+    border-radius: 100px;
+    white-space: nowrap;
+}

@@ -1,18 +1,14 @@
 <main>
   <h3>Troop Directory</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Id</th>
-        <th>Parent Name</th>
-        <th>Daughter Name</th>
-        <th>Address</th>
-        <th>Email</th>
-        <th>Phone Number</th>
-      </tr>
-    </thead>
-    <tbody>
-      
+  <div class="header">
+        <p class="id">Id</p>
+        <p class="parent">Parent Name</p>
+        <p class="daughter">Daughter Name</p>
+        <p class="address">Address</p>
+        <p class="email">Email</p>
+        <p class="phone">Phone Number</p>
+    </div>
+    <div>
       <app-member-listing *ngFor="let member of members"
         [id]="member.id"
         [parentName]="member.parentName"
@@ -21,10 +17,11 @@
         [email]="member.email"
         [phoneNumber]="member.phoneNumber"
         ></app-member-listing>
-      
-    </tbody>
-  </table>
+    </div>
 </main>
+
+<!--Back to top button-->
+<a href="directory" class="top">Back to Top &#8593;</a>
 
 <app-form-links></app-form-links>
 <router-outlet></router-outlet>
