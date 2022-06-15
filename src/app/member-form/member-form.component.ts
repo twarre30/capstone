@@ -26,11 +26,6 @@ export class MemberFormComponent implements OnInit {
   ngOnInit(): void { }
 
 
-  getNewMember(member: Member) {
-    this.router.navigate(['/directory']);
-  }
-
-
   addMember(newMember: Member) {
       this.memberService.addMember(newMember)
     }

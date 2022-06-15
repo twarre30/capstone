@@ -1,4 +1,9 @@
 <main>
+<header>
+  <img src="assets/gs.png" class="logo" alt="Girl Scout logo">
+  <h1>Girl Scout Troop 1770</h1>
+</header>
+  <app-form-links></app-form-links>
   <h3>Troop Directory</h3>
   <div class="header">
         <p class="id">Id</p>
@@ -20,8 +25,15 @@
     </div>
 </main>
 
+<router-outlet></router-outlet>
+
 <!--Back to top button-->
 <a href="directory" class="top">Back to Top &#8593;</a>
 
-<app-form-links></app-form-links>
-<router-outlet></router-outlet>
+<footer>
+  <p class="footer">Please contact me via <a class="button3" href="mailto: twarre30@gmail.com">email</a> with any
+    questions.</p>
+  <small>&copy;2022 Tiffany Warren - All rights reserved</small>
+</footer>
+
+

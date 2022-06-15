@@ -3,6 +3,7 @@ import { Member } from './models/Member';
 import { HttpClient } from '@angular/common/http';
 import {environment} from 'src/environments/environment';
 
+
 type MembersResponse = {
   members: Member[];
 }
@@ -28,6 +29,10 @@ export class MemberService {
     return this.http.post<MemberResponse>(membersEndPoint, member).subscribe(response => {
       this.members = [response.member, ...this.members]
     })
+  }
+
+  getMemberById(id: number) {
+    return this.http.get<Member>(`${environment.baseApiUrl}/api/members/${id}`)
   }
 
   updateMember(member: Member) {
