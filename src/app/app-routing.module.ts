@@ -16,6 +16,7 @@ const routes: Routes = [
         { path: 'member-form', component: MemberFormComponent },
         { path: 'edit-member', component: EditMemberComponent },
         { path: 'remove-member', component: RemoveMemberComponent },
+        { path: '', redirectTo: 'directory', pathMatch: 'full' }
   ] },
   {path: 'events', component: EventsComponent},
   { path: '', redirectTo: '/welcome-page', pathMatch: 'full' },

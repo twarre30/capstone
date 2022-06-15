@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MemberService } from '../member.service';
 import { Member } from '../models/Member';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-member-form',
@@ -19,21 +20,21 @@ export class MemberFormComponent implements OnInit {
 
   members: Member[] = [];
 
-  constructor(private memberService: MemberService) { }
+  constructor(private memberService: MemberService, private router: Router) { }
 
 
-  ngOnInit(): void {
-    this.memberService.fetchMembers().subscribe(response => {
-      this.members = response.members
-    })
+  ngOnInit(): void { }
 
+
+  getNewMember(member: Member) {
+    this.router.navigate(['/directory']);
   }
 
 
-addMember(newMember: Member) {
-  this.memberService.addMember(newMember)
-}
-}
+  addMember(newMember: Member) {
+      this.memberService.addMember(newMember)
+    }
+  }
 
 
 
