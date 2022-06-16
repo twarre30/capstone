@@ -28,6 +28,7 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 src/app/enviroment/environment.ts
+src/app/enviroment/environment.prod.ts
 
 
 # Miscellaneous
