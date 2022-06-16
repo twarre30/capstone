@@ -4,5 +4,5 @@ export type Member = {
   daughterName: string;
   address?: string;
   email?: string;
-  phoneNumber?: string;
+  phoneNumber?: number;
 }

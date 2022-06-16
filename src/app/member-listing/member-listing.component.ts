@@ -12,7 +12,7 @@ export class MemberListingComponent{
   @Input() daughterName!: string;
   @Input() address?: string;
   @Input() email?: string;
-  @Input() phoneNumber?: string;
+  @Input() phoneNumber?: number;
 
   ngAfterViewInit() {
     console.log(this.id);
