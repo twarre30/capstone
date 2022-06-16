@@ -29,3 +29,14 @@ div {
 .phone{
   grid-column: 6 / span 1;
 }
+
+
+@media screen and (max-width: 800px) {
+  div {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+  }
+}
+
+

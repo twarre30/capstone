@@ -42,7 +42,6 @@ h3{
 
 .top {
     --offset: 50px;
-
     position: sticky;
     bottom: 20px;
     margin-left: 90%;
@@ -54,7 +53,6 @@ h3{
     padding: 10px;
     font-family: sans-serif;
     color: hsl(328, 98%, 15%);
-    border-radius: 100px;
     white-space: nowrap;
 }
 
@@ -63,4 +61,10 @@ h3{
     --offset: 50px;
     margin-left: 0px;
   }
+
+  .header{
+    display: flex;
+    flex-direction: column;
+  }
+
 }

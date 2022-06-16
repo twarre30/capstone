@@ -64,5 +64,8 @@ h3{
   main{
     padding: 0px;
   }
+  #divWeatherMain{
+    margin-bottom: 25px;
+  }
 
 }
