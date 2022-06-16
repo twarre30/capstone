@@ -5,6 +5,9 @@
 /tmp
 /out-tsc
 /bazel-out
+/src/app/enviroment/environment.ts
+/src/app/enviroment/environment.prod.ts
+
 
 # Node
 /node_modules
@@ -27,8 +30,6 @@ yarn-error.log
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
-src/app/enviroment/environment.ts
-src/app/enviroment/environment.prod.ts
 
 
 # Miscellaneous
