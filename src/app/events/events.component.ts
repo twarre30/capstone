@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { apiKeyConfig } from 'src/environments/environment';
+import { environment } from 'src/environments/environment';
 import { EventService } from '../event.service';
 import { Event } from '../models/Event';
 
@@ -13,7 +13,7 @@ export class EventsComponent implements OnInit {
   WeatherData: any;
   data: any;
 
-  weatherApiKey = apiKeyConfig.weatherApiKey;
+  weatherApiKey = environment.weatherApiKey;
 
   ngOnInit() {
     this.WeatherData = {
