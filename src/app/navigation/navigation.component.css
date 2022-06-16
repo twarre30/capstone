@@ -18,6 +18,7 @@ nav{
     outline: 0;
     margin: 12px;
 }
+
 .activebutton {
     display: inline-block;
     cursor: pointer;
@@ -41,4 +42,3 @@ nav{
     padding: 6px 12px;
   }
 }
-

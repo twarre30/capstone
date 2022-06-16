@@ -53,8 +53,7 @@ h3{
     text-decoration: none;
     padding: 10px;
     font-family: sans-serif;
-    color: #fff;
-    background: #000;
+    color: hsl(328, 98%, 15%);
     border-radius: 100px;
     white-space: nowrap;
 }
@@ -65,5 +64,3 @@ h3{
     margin-left: 0px;
   }
 }
-
-

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MemberService } from '../member.service';
-import { Member } from '../models/Member';
 import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-directory',
@@ -8,18 +7,12 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./directory.component.css']
 })
 
-
-
 export class DirectoryComponent implements OnInit {
-
-  
-
 
   constructor(private memberService: MemberService, private route: ActivatedRoute, private router: Router ) { }
 
   ngOnInit(): void {
     this.memberService.fetchMembers()
-    
   }
 
   getMembers() {
@@ -35,5 +28,4 @@ export class DirectoryComponent implements OnInit {
   removeMember() {
     this.router.navigate(['/remove-member']), { relativeTo: this.route }
   }
-
 }

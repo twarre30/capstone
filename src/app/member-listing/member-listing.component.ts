@@ -1,15 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
-
-
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-member-listing',
   templateUrl: './member-listing.component.html',
   styleUrls: ['./member-listing.component.css']
 })
-  
 
-export class MemberListingComponent implements OnInit {
+export class MemberListingComponent{
   @Input() id!: number;
   @Input() parentName!: string;
   @Input() daughterName!: string;
@@ -17,13 +14,7 @@ export class MemberListingComponent implements OnInit {
   @Input() email?: string;
   @Input() phoneNumber?: string;
 
-  constructor() { }
-
-  ngOnInit(): void {
-    
-  }
-
-  ngAfterViewInit() { 
+  ngAfterViewInit() {
     console.log(this.id);
     console.log(this.parentName);
   }

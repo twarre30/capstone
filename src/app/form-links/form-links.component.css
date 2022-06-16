@@ -3,7 +3,6 @@ nav{
   justify-content: center;
   align-items: center;
   font-family: 'Open Sans', sans-serif;
-
 }
 
 .button {
@@ -20,6 +19,7 @@ nav{
     outline: 0;
     margin: 12px;
 }
+
 .activebutton {
     display: inline-block;
     cursor: pointer;
@@ -34,7 +34,6 @@ nav{
     border-radius: 25px;
 }
 
-
 @media screen and (max-width: 800px) {
   nav{
     margin-left: 0px;
@@ -44,4 +43,3 @@ nav{
     padding: 6px 12px;
   }
 }
-

@@ -5,6 +5,7 @@ main{
   padding: 25px;
   margin: 5%;
 }
+
 #divWeatherMain{
     display: block;
     border-radius: 10px;
@@ -53,13 +54,11 @@ main{
     to{margin-left: 65px;}
 }
 
-
 h3{
   font-family: 'Indie Flower', cursive;
   font-size: 28px;
   margin-top: -24px;
 }
-
 
 @media screen and (max-width: 800px) {
   main{

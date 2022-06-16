@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MemberService } from '../member.service';
 import { Member } from '../models/Member';
-
 @Component({
   selector: 'app-edit-member',
   templateUrl: './edit-member.component.html',
@@ -16,17 +15,13 @@ import { Member } from '../models/Member';
     PhoneNumber: <input type="text" [(ngModel)]= "phoneNumber" >
 `
 })
-export class EditMemberComponent implements OnInit {
-
+export class EditMemberComponent {
 
   constructor(private member: MemberService) { }
 
-
-  ngOnInit(): void { }
-
-
+  @ViewChild('editMemberForm') editMemberForm: any;
   updateMember(updateMember: Member) {
     this.member.updateMember(updateMember)
+    this.editMemberForm.reset();
   }
-
 }

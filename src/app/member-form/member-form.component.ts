@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MemberService } from '../member.service';
 import { Member } from '../models/Member';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-member-form',
   templateUrl: './member-form.component.html',
@@ -16,20 +15,13 @@ import { Router } from '@angular/router';
     PhoneNumber: <input type="text" [(ngModel)]= "phoneNumber" >
 `
 })
-export class MemberFormComponent implements OnInit {
-
-  
+export class MemberFormComponent{
 
   constructor(private memberService: MemberService, private router: Router) { }
 
-
-  ngOnInit(): void { }
-
-
+  @ViewChild('newMemberForm') newMemberForm: any;
   addMember(newMember: Member) {
-      this.memberService.addMember(newMember)
+    this.memberService.addMember(newMember)
+    this.newMemberForm.reset();
     }
   }
-
-
-

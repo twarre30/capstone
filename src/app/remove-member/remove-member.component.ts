@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component,  ViewChild } from '@angular/core';
 import { MemberService } from '../member.service';
 import { Member } from '../models/Member';
 
@@ -11,20 +11,13 @@ import { Member } from '../models/Member';
     Id: <input type="text" [(ngModel)] = "id" >
 `
 })
-export class RemoveMemberComponent implements OnInit {
-
+export class RemoveMemberComponent  {
 
   constructor(private memberService: MemberService) { }
-
-
-  ngOnInit(): void { }
-
 
 @ViewChild('removeMemberForm') removeMemberForm: any;
   deleteMember(deleteMember: Member) {
     this.memberService.deleteMember(deleteMember);
     this.removeMemberForm.reset();
   }
-
-
 }

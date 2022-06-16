@@ -1,17 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-event-listing',
   templateUrl: './event-listing.component.html',
   styleUrls: ['./event-listing.component.css']
 })
-export class EventListingComponent implements OnInit {
+export class EventListingComponent  {
   @Input() date!: string;
   @Input() plan!: string;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
